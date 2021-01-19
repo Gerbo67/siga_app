@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:siga_app/properties/MyColors.dart';
 import 'package:siga_app/properties/MyIcons.dart';
 import 'Background.dart';
+import 'Dialog.dart';
 
 Widget Login() {
   final _formKey = GlobalKey<FormState>();
@@ -50,7 +51,7 @@ Widget Login() {
                           Expanded(
                               flex: 3,
                               child: Container(
-                                margin: EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                margin: EdgeInsets.fromLTRB(35, 20, 35, 30),
                                 //color: Colors.blue,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -101,7 +102,7 @@ Widget Login() {
                                        ),
                                        GestureDetector(
                                            onTap: () {
-                                             // DialogIngresaNoControl(context);
+                                              DialogIngresaNoControl(context);
                                            },
                                            child: Container(
                                              child: Text(
@@ -137,7 +138,7 @@ Widget Login() {
                                           }
                                         },
                                         child: Ink(
-                                            width: MediaQuery.of(context).size.width/1.4,
+                                            width: MediaQuery.of(context).size.width/1.5,
                                             height: 54,
                                             decoration: BoxDecoration(
                                                 color: SecondaryColor,
