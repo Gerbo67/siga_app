@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:siga_app/properties/MyColors.dart';
+import 'package:siga_app/screens/home/home.dart';
 import 'package:siga_app/screens/login/Login.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class LoginClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Login()
+        home: Home()
     );
   }
 }
