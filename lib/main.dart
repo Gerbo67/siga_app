@@ -20,7 +20,18 @@ class LoginClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        home: Login()
+    );
+  }
+}
+
+class Menu extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+
+    return MaterialApp(
         home: Home()
     );
   }
+
 }
