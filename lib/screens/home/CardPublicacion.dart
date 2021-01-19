@@ -1,12 +1,10 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:siga_app/properties/MyColors.dart';
 
 Widget CardPublicacion() {
   return Container(
-    margin: EdgeInsets.fromLTRB(5, 0, 5, 7.5),
+    margin: EdgeInsets.fromLTRB(5, 0, 5, 25),
     height: 220.0,
     alignment: Alignment.center,
     decoration: BoxDecoration(
@@ -14,9 +12,9 @@ Widget CardPublicacion() {
       color: Colors.white,
       boxShadow: [
         BoxShadow(
-          color: Color(0x55000000),
-          blurRadius: 3.0, // shadow direction: bottom right
-        )
+            color: Colors.black.withOpacity(0.25),
+            blurRadius: 2 // shadow direction: bottom right
+            )
       ],
     ),
     child: Column(
@@ -43,7 +41,8 @@ Widget CardPublicacion() {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(50),
                                 child: Image(
-                                    image: AssetImage('assets/images/Perfil.jpg')),
+                                    image:
+                                        AssetImage('assets/images/Perfil.jpg')),
                               ),
                               width: 35,
                               height: 35,
@@ -64,14 +63,13 @@ Widget CardPublicacion() {
                       flex: 1,
                       child: Container(
                           child: Stack(
-
-                            children: <Widget>[
-                              Positioned(
-                                child: myPopMenu(),
-                                left: -9,
-                              )
-                            ],
-                          )))
+                        children: <Widget>[
+                          Positioned(
+                            child: myPopMenu(),
+                            left: -9,
+                          )
+                        ],
+                      )))
                 ],
               ),
             )),
@@ -120,27 +118,27 @@ Widget CardPublicacion() {
                   Expanded(
                       flex: 1,
                       child: Container(
-                        //color: Colors.blue,
+                          //color: Colors.blue,
                           child: Container(
-                            //color: Colors.red,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Container(
-                                    margin: EdgeInsets.all(5),
-                                    child: Icon(
-                                      //Icons.favorite_rounded
-                                      Icons.comment_outlined,
-                                      color: IconColor,
-                                      size: 22,
-                                    )),
-                                Text(
-                                  "Comentar",
-                                  style: TextStyle(color: IconColor, fontSize: 15),
-                                )
-                              ],
-                            ),
-                          ))),
+                        //color: Colors.red,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                                margin: EdgeInsets.all(5),
+                                child: Icon(
+                                  //Icons.favorite_rounded
+                                  Icons.comment_outlined,
+                                  color: IconColor,
+                                  size: 22,
+                                )),
+                            Text(
+                              "Comentar",
+                              style: TextStyle(color: IconColor, fontSize: 15),
+                            )
+                          ],
+                        ),
+                      ))),
                 ],
               ),
             ))
@@ -153,15 +151,17 @@ Widget myPopMenu() {
   return PopupMenuButton(
       onSelected: (value) {},
       itemBuilder: (context) => [
-        PopupMenuItem(
-          height: 35,
-          value: 0,
-          child: Text('Mensaje',style: TextStyle(color: IconColor, fontSize: 15)),
-        ),
-        PopupMenuItem(
-          height: 35,
-          value: 1,
-          child: Text('Reportar',style: TextStyle(color: IconColor, fontSize: 15)),
-        ),
-      ]);
+            PopupMenuItem(
+              height: 35,
+              value: 0,
+              child: Text('Mensaje',
+                  style: TextStyle(color: IconColor, fontSize: 15)),
+            ),
+            PopupMenuItem(
+              height: 35,
+              value: 1,
+              child: Text('Reportar',
+                  style: TextStyle(color: IconColor, fontSize: 15)),
+            ),
+          ]);
 }

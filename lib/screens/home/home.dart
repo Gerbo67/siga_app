@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:siga_app/properties/MyColors.dart';
 
+import 'BottomNavigationBar.dart';
 import 'CardPublicacion.dart';
 
 Widget Home() {
@@ -21,7 +22,7 @@ Widget Home() {
                       width: MediaQuery.of(context).size.width / 1.1,
                       height: 60,
                       child: Material(
-                        elevation: 5.0,
+                        elevation: 3.0,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(2)),
                         child: TextFormField(
@@ -68,7 +69,7 @@ Widget Home() {
                   child: Container(
                     margin: EdgeInsets.only(top:15,bottom: 15),
                     width: MediaQuery.of(context).size.width / 1.1,
-                    color: Colors.red,
+                    //color: Colors.red,
                     child: ListView(
                       padding: EdgeInsets.only(top:8),
                       children: [
@@ -85,7 +86,15 @@ Widget Home() {
             Expanded(
                 flex: 1,
                 child: Container(
-                  color: Colors.orange,
+                  decoration: BoxDecoration(
+                    boxShadow:  [
+                      BoxShadow(
+                          color: Colors.black.withOpacity(0.25),
+                          blurRadius: 2 // shadow direction: bottom right
+                      )
+                    ],
+                  ),
+                  child: HomeBottomNavigationBar(),
                 )),
           ],
         );
