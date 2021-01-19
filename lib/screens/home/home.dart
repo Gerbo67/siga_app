@@ -94,7 +94,7 @@ Widget Home() {
                       )
                     ],
                   ),
-                  child: HomeBottomNavigationBar(),
+                  child: HomeBottomNavigationBar(context),
                 )),
           ],
         );

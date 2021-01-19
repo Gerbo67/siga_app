@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:siga_app/properties/MyColors.dart';
 import 'package:siga_app/properties/MyIcons.dart';
 
-Widget HomeBottomNavigationBar() {
+import 'HomeDialog.dart';
+
+Widget HomeBottomNavigationBar(context) {
   return Container(
       color: cardColor,
       child: Column(
@@ -28,7 +30,11 @@ Widget HomeBottomNavigationBar() {
                 Container(
                   width: 55,
                   height: 55,
-                  child: Column(
+                  child: GestureDetector(
+                    onTap: (){
+                      DialogCrearPublicacion(context);
+                      },
+                    child:Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(IconDesing.add_circle_outline,
@@ -36,21 +42,20 @@ Widget HomeBottomNavigationBar() {
                       Text('Publica', style: TextStyle(color: PrimaryColor))
                     ],
                   ),
+                  ),
                 ),
-
-
                 Container(
                   width: 55,
                   height: 55,
-                  child:  Column(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
                         decoration: BoxDecoration(
                           border: Border.all(width: 2.5, color: PrimaryColor),
                           borderRadius: BorderRadius.all(Radius.circular(
-                              50.0) //                 <--- border radius here
-                          ),
+                                  50.0) //                 <--- border radius here
+                              ),
                         ),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(1000),
@@ -65,8 +70,6 @@ Widget HomeBottomNavigationBar() {
                     ],
                   ),
                 ),
-
-
               ],
             ),
           )
