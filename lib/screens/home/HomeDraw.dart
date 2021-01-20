@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:siga_app/properties/MyColors.dart';
 import 'package:siga_app/properties/MyIcons.dart';
 
-Widget HomeDrawer() {
+Widget HomeDrawer(_scaffoldkey) {
   return Drawer(
     child: Column(
       children: [
@@ -186,7 +186,7 @@ Widget HomeDrawer() {
                           child: Icon(IconDesing.salida,
                               color: BlackIcon, size: 16),
                           onTap: () {
-                           // _scaffoldkey.currentState.openDrawer();
+                            _scaffoldkey.currentState.openDrawer();
                           },
                         ),
                         Container(
