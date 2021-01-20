@@ -5,10 +5,12 @@ import 'package:siga_app/properties/MyColors.dart';
 
 import 'BottomNavigationBar.dart';
 import 'CardPublicacion.dart';
+import 'HomeDraw.dart';
 
 Widget Home() {
   return Scaffold(
       resizeToAvoidBottomPadding: false,
+      endDrawer: HomeDrawer(),
       body: Builder(builder: (context) {
         return Column(
           children: [
