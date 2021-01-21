@@ -21,16 +21,16 @@ class HomeState extends State<HomeClass> {
   final GlobalKey<ScaffoldState> _scaffoldkey = new GlobalKey();
 
   PublicacionModel publicacion1 = PublicacionModel(
-    imagen: 'Perfil',
-    nombre: 'Anonimo Perez Juarez',
-    contenido: 'En la escuela los mejores temas a tratar son lo temas de suma importancia, los cuales reciben y coinciden en varias fracciones de información, las cuales nos hacen dirigir y persaudir personas, mencionando asi las mejores carreras que son las que en la institucion estan y pueden dirigirse para cosas sumamente importantes.'
-  );
+      imagen: 'Perfil',
+      nombre: 'Anonimo Perez Juarez',
+      contenido:
+          'En la escuela los mejores temas a tratar son lo temas de suma importancia, los cuales reciben y coinciden en varias fracciones de información, las cuales nos hacen dirigir y persaudir personas, mencionando asi las mejores carreras que son las que en la institucion estan y pueden dirigirse para cosas sumamente importantes.');
 
   PublicacionModel publicacion2 = PublicacionModel(
       imagen: 'Perfil2',
       nombre: 'Anonimo Rodriguez Lino',
-      contenido: 'En la escuela los mejores temas a tratar son lo temas de suma importancia, los cuales reciben y coinciden en varias fracciones de información, las cuales nos hacen dirigir y persaudir personas, mencionando asi las mejores carreras que son las que en la institucion estan y pueden dirigirse para cosas sumamente importantes.'
-  );
+      contenido:
+          'En la escuela los mejores temas a tratar son lo temas de suma importancia, los cuales reciben y coinciden en varias fracciones de información, las cuales nos hacen dirigir y persaudir personas, mencionando asi las mejores carreras que son las que en la institucion estan y pueden dirigirse para cosas sumamente importantes.');
 
   @override
   Widget build(BuildContext context) {
@@ -125,7 +125,7 @@ class HomeState extends State<HomeClass> {
                             )
                       ],
                     ),
-                    child: HomeBottomNavigationBar(context,_scaffoldkey),
+                    child: HomeBottomNavigationBar(context, _scaffoldkey),
                   )),
             ],
           );
