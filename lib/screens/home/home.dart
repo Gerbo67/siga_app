@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:siga_app/models/home/publicacion_model.dart';
 import 'package:siga_app/properties/MyColors.dart';
 
 import 'BottomNavigationBar.dart';
@@ -18,6 +19,18 @@ class HomeClass extends StatefulWidget {
 
 class HomeState extends State<HomeClass> {
   final GlobalKey<ScaffoldState> _scaffoldkey = new GlobalKey();
+
+  PublicacionModel publicacion1 = PublicacionModel(
+    imagen: 'Perfil',
+    nombre: 'Anonimo Perez Juarez',
+    contenido: 'En la escuela los mejores temas a tratar son lo temas de suma importancia, los cuales reciben y coinciden en varias fracciones de información, las cuales nos hacen dirigir y persaudir personas, mencionando asi las mejores carreras que son las que en la institucion estan y pueden dirigirse para cosas sumamente importantes.'
+  );
+
+  PublicacionModel publicacion2 = PublicacionModel(
+      imagen: 'Perfil2',
+      nombre: 'Anonimo Rodriguez Lino',
+      contenido: 'En la escuela los mejores temas a tratar son lo temas de suma importancia, los cuales reciben y coinciden en varias fracciones de información, las cuales nos hacen dirigir y persaudir personas, mencionando asi las mejores carreras que son las que en la institucion estan y pueden dirigirse para cosas sumamente importantes.'
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -90,11 +103,12 @@ class HomeState extends State<HomeClass> {
                       child: ListView(
                         padding: EdgeInsets.only(top: 8),
                         children: [
-                          CardPublicacion(),
-                          CardPublicacion(),
-                          CardPublicacion(),
-                          CardPublicacion(),
-                          CardPublicacion(),
+                          CardPublicacion(publicacion1),
+                          CardPublicacion(publicacion2),
+                          CardPublicacion(publicacion1),
+                          CardPublicacion(publicacion2),
+                          CardPublicacion(publicacion1),
+                          CardPublicacion(publicacion2),
                         ],
                       ),
                     ),

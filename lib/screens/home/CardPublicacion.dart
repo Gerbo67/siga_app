@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:siga_app/models/home/publicacion_model.dart';
 import 'package:siga_app/properties/MyColors.dart';
 
-Widget CardPublicacion() {
+Widget CardPublicacion(PublicacionModel publicacion) {
   return Container(
     margin: EdgeInsets.fromLTRB(5, 0, 5, 25),
     height: 220.0,
@@ -42,7 +43,7 @@ Widget CardPublicacion() {
                                 borderRadius: BorderRadius.circular(50),
                                 child: Image(
                                     image:
-                                        AssetImage('assets/images/Perfil.jpg')),
+                                        AssetImage('assets/images/'+ publicacion.imagen +'.jpg')),
                               ),
                               width: 35,
                               height: 35,
@@ -50,8 +51,7 @@ Widget CardPublicacion() {
                             //Nombre
                             Container(
                               margin: EdgeInsets.fromLTRB(8, 0, 0, 0),
-                              child: Text(
-                                "Anonimo Perez Juaréz",
+                              child: Text(publicacion.nombre,
                                 style: TextStyle(color: LetrasColor),
                               ),
                             )
@@ -78,8 +78,8 @@ Widget CardPublicacion() {
             flex: 2,
             child: Container(
               margin: EdgeInsets.all(8), //color: Colors.blue,
-              child: Text(
-                "En la escuela los mejores temas a tratar son lo temas de suma importancia, los cuales reciben y coinciden en varias fracciones de información, las cuales nos hacen dirigir y persaudir personas, mencionando asi las mejores carreras que son las que en la institucion estan y pueden dirigirse para cosas sumamente importantes.",
+              child: Text(publicacion.contenido,
+                //"En la escuela los mejores temas a tratar son lo temas de suma importancia, los cuales reciben y coinciden en varias fracciones de información, las cuales nos hacen dirigir y persaudir personas, mencionando asi las mejores carreras que son las que en la institucion estan y pueden dirigirse para cosas sumamente importantes.",
                 style: TextStyle(color: LetrasColor, height: 1.3),
               ),
             )),
