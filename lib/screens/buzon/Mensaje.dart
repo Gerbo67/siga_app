@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:siga_app/models/buzon/mensaje_model.dart';
 import 'package:siga_app/properties/MyColors.dart';
 
-Widget CustomListTile() {
+Widget CustomListTile(MensajeModel mensaje) {
   return ListTile(
     onTap: (){
       print('hola');
@@ -9,7 +10,7 @@ Widget CustomListTile() {
     leading: Container(
       child: ClipRRect(
         borderRadius: BorderRadius.circular(50),
-        child: Image(image: AssetImage('assets/images/Perfil2.jpg')),
+        child: Image(image: AssetImage('assets/images/'+mensaje.imagen+'.jpg')),
       ),
       width: 50,
       height: 50,
@@ -18,17 +19,17 @@ Widget CustomListTile() {
     title: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text('Animo Perez Juarez',
+        Text(mensaje.nombre,
             style: TextStyle(
                 color: LetrasColor, fontWeight: FontWeight.bold, fontSize: 16)),
-        Text('12:03', style: TextStyle(color: LetrasColor)),
+        Text(mensaje.hora, style: TextStyle(color: LetrasColor)),
       ],
     ),
     //subtitle: Text('Te queria pregunatr unas cosas'),
     subtitle: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text('Te queria preguntar unas cosas...',
+        Text(mensaje.contenido,
             style: TextStyle(color: LetrasColor, fontSize: 16)),
         Container(
           width: 35,
@@ -44,7 +45,7 @@ Widget CustomListTile() {
                 child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    '1',
+                    mensaje.nuevos,
                     style: TextStyle(color: Colors.white),
                   ),
                 )),

@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:siga_app/properties/MyColors.dart';
 import 'package:siga_app/screens/buzon/Buzon.dart';
 import 'package:siga_app/screens/home/Home.dart';
+import 'package:siga_app/screens/login/Login.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -24,7 +25,7 @@ class LoginClass extends StatelessWidget {
         'principal': (context) => Home(),
         'buzon': (context) => Buzon(),
       },
-        home: Home()
+        home: Login()
     );
   }
 }
