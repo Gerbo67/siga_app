@@ -14,6 +14,7 @@ Color LineColor = _colorFromHex("#DDDDDD");
 Color IconColor = _colorFromHex("#606060");
 Color PrimaryLetras = _colorFromHex("#181A2F");
 Color BackDraw = _colorFromHex("#EBEBEB");
+Color BackBuzon = _colorFromHex("#F2F2F2");
 
 //Funcion para leer hexadecimal
 Color _colorFromHex(String hexColor) {

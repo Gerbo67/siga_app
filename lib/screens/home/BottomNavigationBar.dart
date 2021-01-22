@@ -5,7 +5,7 @@ import 'package:siga_app/properties/MyIcons.dart';
 
 import 'HomeDialog.dart';
 
-Widget HomeBottomNavigationBar(context,_scaffoldkey) {
+Widget HomeBottomNavigationBar(context, _scaffoldkey) {
   return Container(
       color: cardColor,
       child: Column(
@@ -16,36 +16,40 @@ Widget HomeBottomNavigationBar(context,_scaffoldkey) {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  width: 55,
-                  height: 55,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(IconDesing.mensajes, color: PrimaryColor, size: 25),
-                      Text('Mensajes', style: TextStyle(color: PrimaryColor))
-                    ],
-                  ),
-                ),
-                Container(
-                  width: 55,
-                  height: 55,
-                  child: GestureDetector(
-                    onTap: (){
-                      DialogCrearPublicacion(context);
-                      },
-                    child:Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(IconDesing.add_circle_outline,
-                          color: PrimaryColor, size: 30),
-                      Text('Publica', style: TextStyle(color: PrimaryColor))
-                    ],
-                  ),
+                GestureDetector(
+                    onTap: () => Navigator.pushNamed(context, 'buzon'),
+                    child: Container(
+                      width: 55,
+                      height: 55,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(IconDesing.mensajes,
+                              color: PrimaryColor, size: 25),
+                          Text('Mensajes',
+                              style: TextStyle(color: PrimaryColor))
+                        ],
+                      ),
+                    )),
+                GestureDetector(
+                  onTap: () {
+                    DialogCrearPublicacion(context);
+                  },
+                  child: Container(
+                    width: 55,
+                    height: 55,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(IconDesing.add_circle_outline,
+                            color: PrimaryColor, size: 30),
+                        Text('Publica', style: TextStyle(color: PrimaryColor))
+                      ],
+                    ),
                   ),
                 ),
                 GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     _scaffoldkey.currentState.openEndDrawer();
                   },
                   child: Container(
@@ -58,8 +62,8 @@ Widget HomeBottomNavigationBar(context,_scaffoldkey) {
                           decoration: BoxDecoration(
                             border: Border.all(width: 2.5, color: PrimaryColor),
                             borderRadius: BorderRadius.all(Radius.circular(
-                                50.0) //                 <--- border radius here
-                            ),
+                                    50.0) //                 <--- border radius here
+                                ),
                           ),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(1000),

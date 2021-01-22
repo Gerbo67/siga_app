@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:siga_app/properties/MyColors.dart';
 import 'package:siga_app/properties/MyIcons.dart';
-import 'package:siga_app/screens/home/home.dart';
-import '../../main.dart';
 import 'Background.dart';
 import 'Dialog.dart';
 
@@ -131,9 +129,7 @@ Widget Login() {
                                           onTap:
                                           if (_formKey.currentState.validate()) {
                                             // Si creedenciales son validas ingresa a home
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(builder: (context) => Menu()));
+                                            Navigator.pushNamed(context, 'principal');
                                           }
                                         },
                                         child: Ink(
