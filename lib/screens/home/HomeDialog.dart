@@ -150,21 +150,20 @@ class _CrearPublicacionState extends State<CrearPublicacion> {
                   flex: 2,
                   child: Container(
                     //color:Colors.red,
-                    margin: EdgeInsets.only(right: 10,left: 10,bottom: 10),
+                    margin: EdgeInsets.only(right: 10, left: 10, bottom: 10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        GestureDetector(
-                          onTap: () {
+                        IconButton(
+                          icon: Icon(
+                            IconDesing.salida,
+                            size: 15,
+                            color: BlackIcon,
+                          ),
+                          alignment: Alignment.centerLeft,
+                          onPressed: () {
                             Navigator.pop(context, false);
                           },
-                          child: Container(
-                            child: Icon(
-                              IconDesing.salida,
-                              size: 15,
-                              color: BlackIcon,
-                            ),
-                          ),
                         ),
                         Container(
                             width: 100,

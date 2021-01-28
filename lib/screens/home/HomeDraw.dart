@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:siga_app/properties/MyColors.dart';
 import 'package:siga_app/properties/MyIcons.dart';
 
@@ -182,13 +183,10 @@ Widget HomeDrawer(_scaffoldkey) {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        GestureDetector(
-                          child: Icon(IconDesing.salida,
-                              color: BlackIcon, size: 16),
-                          onTap: () {
-                            _scaffoldkey.currentState.openDrawer();
-                          },
-                        ),
+                          IconButton(icon: Icon(IconDesing.salida,
+                              color: BlackIcon, size: 16),alignment: Alignment.centerLeft,onPressed: (){_scaffoldkey.currentState.openDrawer();},),
+
+
                         Container(
                           child: Row(
                             children: [
