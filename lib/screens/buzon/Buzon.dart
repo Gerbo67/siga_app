@@ -10,7 +10,7 @@ import 'Mensaje.dart';
 Widget Buzon() {
 
 
-  List<MensajeModel> mensaje = [mensaje1,mensaje2];
+  List<MensajeModel> mensaje = [mensaje1,mensaje2,mensaje3,mensaje1,mensaje2,mensaje3,mensaje1,mensaje2,mensaje3];
 
   return Scaffold(
       resizeToAvoidBottomPadding: false,

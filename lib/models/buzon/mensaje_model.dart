@@ -26,3 +26,12 @@ MensajeModel mensaje2 = MensajeModel(
     nuevos: '5',
     numControl: 1218100472
 );
+
+MensajeModel mensaje3 = MensajeModel(
+    imagen: 'Perfil',
+    nombre: 'Anonimo Rodriguez Lino2',
+    hora: '21/10/19',
+    contenido: 'Me gustaria unirme al club...',
+    nuevos: '99',
+    numControl: 1218100473
+);
