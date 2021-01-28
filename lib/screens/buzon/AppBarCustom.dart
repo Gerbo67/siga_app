@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:siga_app/properties/MyColors.dart';
 import 'package:siga_app/properties/MyIcons.dart';
 
@@ -16,8 +17,7 @@ Widget CustomAppBar(context) {
             GestureDetector(
                 onTap: () => Navigator.pushNamed(context, 'principal'),
                 child: Container(
-                  padding: EdgeInsets.only(right: 20, top: 10, bottom: 20),
-                  child: Icon(IconDesing.salida, color: BlackIcon, size: 16),
+                  child: IconButton(icon: Icon(IconDesing.salida, color: BlackIcon, size: 16),alignment: Alignment.centerLeft),
                 )),
             Center(
               child: Material(

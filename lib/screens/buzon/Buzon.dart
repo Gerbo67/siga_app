@@ -9,21 +9,8 @@ import 'Mensaje.dart';
 
 Widget Buzon() {
 
-  MensajeModel mensaje1 = MensajeModel(
-    imagen: 'Perfil',
-    nombre: 'Anonimo Perez Juarez',
-    hora: '22:03',
-    contenido: 'Te queria preguntar unas cosas...',
-    nuevos: '1'
-  );
 
-  MensajeModel mensaje2 = MensajeModel(
-      imagen: 'Perfil2',
-      nombre: 'Anonimo Rodriguez Lino',
-      hora: 'Miercoles',
-      contenido: 'Las frutas son rojas sabias?...',
-      nuevos: '5'
-  );
+  List<MensajeModel> mensaje = [mensaje1,mensaje2];
 
   return Scaffold(
       resizeToAvoidBottomPadding: false,
@@ -50,16 +37,8 @@ Widget Buzon() {
                 child: ListView(
                   padding: EdgeInsets.zero,
                   children: [
-                    CustomListTile(mensaje1),
-                    CustomListTile(mensaje2),
-                    CustomListTile(mensaje1),
-                    CustomListTile(mensaje2),
-                    CustomListTile(mensaje1),
-                    CustomListTile(mensaje2),
-                    CustomListTile(mensaje1),
-                    CustomListTile(mensaje2),
-                    CustomListTile(mensaje1),
-                    CustomListTile(mensaje2),
+                    for(int i = 0 ; i<mensaje.length;i++)
+                      CustomListTile(mensaje: mensaje[i])
                   ],
                 ),
               ),
