@@ -19,7 +19,6 @@ Widget HomeBottomNavigationBar(context, _scaffoldkey) {
                 GestureDetector(
                     onTap: () => Navigator.pushNamed(context, 'buzon'),
                     child: Container(
-                      width: 55,
                       height: 55,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -36,7 +35,6 @@ Widget HomeBottomNavigationBar(context, _scaffoldkey) {
                     DialogCrearPublicacion(context);
                   },
                   child: Container(
-                    width: 55,
                     height: 55,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -53,7 +51,6 @@ Widget HomeBottomNavigationBar(context, _scaffoldkey) {
                     _scaffoldkey.currentState.openEndDrawer();
                   },
                   child: Container(
-                    width: 55,
                     height: 55,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,

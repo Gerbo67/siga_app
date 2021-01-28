@@ -59,9 +59,7 @@ class _DetalleMensajeState extends State<DetalleMensaje> {
               margin: EdgeInsets.only(right: 10),
             ),
             Container(
-              height: 25,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     width: 200,

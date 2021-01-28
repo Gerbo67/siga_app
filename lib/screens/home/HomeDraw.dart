@@ -183,10 +183,14 @@ Widget HomeDrawer(_scaffoldkey) {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                          IconButton(icon: Icon(IconDesing.salida,
-                              color: BlackIcon, size: 16),alignment: Alignment.centerLeft,onPressed: (){_scaffoldkey.currentState.openDrawer();},),
-
-
+                        IconButton(
+                          icon: Icon(IconDesing.salida,
+                              color: BlackIcon, size: 16),
+                          alignment: Alignment.centerLeft,
+                          onPressed: () {
+                            _scaffoldkey.currentState.openDrawer();
+                          },
+                        ),
                         Container(
                           child: Row(
                             children: [
