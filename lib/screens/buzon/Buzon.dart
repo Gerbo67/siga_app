@@ -24,7 +24,14 @@ class Buzon extends StatelessWidget {
         resizeToAvoidBottomPadding: false,
         appBar: AppBar(
           backgroundColor: LightColor,
-          iconTheme: IconThemeData(color: BlackIcon),
+          leading: IconButton(
+            icon: Icon(IconDesing.salida),
+            color: BlackIcon,
+            iconSize: 16,
+            onPressed: () {
+              Navigator.pushNamed(context, 'principal');
+            },
+          ),
           actions: [
             Container(
                 margin: EdgeInsets.all(8),
