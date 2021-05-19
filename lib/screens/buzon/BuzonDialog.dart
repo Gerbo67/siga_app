@@ -18,7 +18,6 @@ class MandarMensaje extends StatefulWidget {
 }
 
 class _MandarMensajeState extends State<MandarMensaje> {
-  String dropdownValue = 'Edificio';
 
   @override
   Widget build(BuildContext context) {
@@ -154,8 +153,6 @@ class _MandarMensajeState extends State<MandarMensaje> {
                                           visibilityDialog = false;
                                         });
                                       }
-
-
                                       */
                                         },
                                         child: Ink(

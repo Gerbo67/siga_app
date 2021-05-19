@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:siga_app/properties/MyColors.dart';
 import 'package:siga_app/properties/MyIcons.dart';
+import 'package:siga_app/screens/calificaciones/Calificaciones.dart';
 
-Widget HomeDrawer(_scaffoldkey) {
+Widget HomeDrawer(context,_scaffoldkey) {
   return Drawer(
     child: Column(
       children: [
@@ -62,18 +63,21 @@ Widget HomeDrawer(_scaffoldkey) {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Container(
-                    child: Row(
-                      children: [
-                        Text(
-                          "Calificaciones",
-                          style: TextStyle(fontSize: 17, color: BlackIcon),
-                        ),
-                        Icon(
-                          IconDesing.cali_icon,
-                          color: BlackIcon,
-                        )
-                      ],
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    child: GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, 'calificaciones'),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Calificaciones",
+                            style: TextStyle(fontSize: 17, color: BlackIcon),
+                          ),
+                          Icon(
+                            IconDesing.cali_icon,
+                            color: BlackIcon,
+                          )
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      ),
                     ),
                   ),
                   Container(

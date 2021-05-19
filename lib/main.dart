@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:siga_app/properties/MyColors.dart';
 import 'package:siga_app/screens/buzon/Buzon.dart';
+import 'package:siga_app/screens/calificaciones/Calificaciones.dart';
 import 'package:siga_app/screens/home/Home.dart';
 import 'package:siga_app/screens/login/Login.dart';
 
@@ -24,6 +25,7 @@ class LoginClass extends StatelessWidget {
       routes: {
         'principal': (context) => Home(),
         'buzon': (context) => Buzon(),
+        'calificaciones': (context) => Calificaciones(),
       },
         home: Login()
     );

@@ -37,7 +37,7 @@ class HomeState extends State<HomeClass> {
     return Scaffold(
         key: _scaffoldkey,
         resizeToAvoidBottomPadding: false,
-        endDrawer: HomeDrawer(_scaffoldkey),
+        endDrawer: HomeDrawer(context,_scaffoldkey),
         body: Builder(builder: (context) {
           return Column(
             children: [
