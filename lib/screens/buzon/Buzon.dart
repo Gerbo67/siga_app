@@ -21,7 +21,7 @@ class Buzon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomPadding: false,
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           backgroundColor: LightColor,
           leading: IconButton(

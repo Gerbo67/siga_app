@@ -17,6 +17,7 @@ Color BackDraw = _colorFromHex("#EBEBEB");
 Color BackBuzon = _colorFromHex("#F2F2F2");
 Color SuccessCalificacion = _colorFromHex("#99FFEB");
 Color FailCalificacion = _colorFromHex("#FF9999");
+Color OverlayColor = _colorFromHex("#000000AA");
 
 //Funcion para leer hexadecimal
 Color _colorFromHex(String hexColor) {

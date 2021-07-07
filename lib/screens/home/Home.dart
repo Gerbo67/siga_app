@@ -36,7 +36,7 @@ class HomeState extends State<HomeClass> {
   Widget build(BuildContext context) {
     return Scaffold(
         key: _scaffoldkey,
-        resizeToAvoidBottomPadding: false,
+        resizeToAvoidBottomInset: false,
         endDrawer: HomeDrawer(context,_scaffoldkey),
         body: Builder(builder: (context) {
           return Column(
